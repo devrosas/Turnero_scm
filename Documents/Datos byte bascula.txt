@@ -1,0 +1,51 @@
+Balanza 2 
+
+Conexión establecida con ('192.168.0.152', 52607)
+Datos recibidos (bytes): b'\x02D01850202=8\x04'
+Datos recibidos (texto): D01850202=8
+Comando: Retroceder turno
+
+
+Conexión establecida con ('192.168.0.152', 52613)
+Datos recibidos (bytes): b'\x02D01850102=7\x04'
+Datos recibidos (texto): D01850102=7
+Comando: Avanzar turno
+
+
+Conexión establecida con ('192.168.0.152', 52619)
+Datos recibidos (bytes): b'\x02D0185030000520200\x04'
+Datos recibidos (texto): D0185030000520200
+Comando: Actualizar turno a 52
+
+Conexión establecida con ('192.168.0.152', 52624)
+Datos recibidos (bytes): b'\x02D01850300001402?>\x04'
+Datos recibidos (texto): D01850300001402?>
+Comando: Actualizar turno a 14
+
+Balanza 1
+
+Conexión establecida con ('192.168.0.151', 52603)
+Datos recibidos (bytes): b'\x02D01850101=6\x04'
+Datos recibidos (texto): D01850101=6
+Comando: Avanzar turno
+Conexión cerrada.
+
+Datos recibidos (bytes): b'\x02D01850201=7\x04'
+Datos recibidos (texto): D01850201=7
+Comando: Retroceder turno
+Conexión cerrada.
+
+Conexión establecida con ('192.168.0.151', 52644)
+Datos recibidos (bytes): b'\x02D01850300001401?=\x04'
+Datos recibidos (texto): D01850300001401?=
+Comando: Actualizar turno a 14
+
+Conexión establecida con ('192.168.0.151', 52648)
+Datos recibidos (bytes): b'\x02D01850300005201??\x04'
+Datos recibidos (texto): D01850300005201??
+Comando: Actualizar turno a 52
+
+
+Datos recibidos (bytes): b'\x02D0185030000520200\x04'
+Datos recibidos (bytes): b'\x02D01850201=7\x04'
+Datos recibidos (bytes): b'\x02D01850101=6\x04'

@@ -1,0 +1,69 @@
+Análisis de DatabaseManager.py
+1. Estructura general:
+La clase está bien organizada y cumple con su propósito principal: gestionar la conexión y operaciones con la base de datos SQLite.
+
+Los nombres de los métodos y atributos son descriptivos y fáciles de entender.
+
+2. Atributos:
+TABLE_NAME y COLUMNS:
+
+Son constantes que definen el nombre de la tabla y las columnas. Esto es una buena práctica, ya que facilita el mantenimiento del código.
+
+Funciona correctamente.
+
+3. Métodos:
+__init__:
+
+Inicializa la conexión a la base de datos y crea la tabla si no existe.
+
+Maneja errores básicos de conexión.
+
+Funciona correctamente.
+
+create_table:
+
+Crea la tabla productos si no existe.
+
+Maneja errores básicos al crear la tabla.
+
+Funciona correctamente.
+
+get_products:
+
+Obtiene todos los productos de la base de datos.
+
+Funciona correctamente.
+
+get_promociones:
+
+Obtiene los productos para promociones.
+
+Funciona correctamente.
+
+get_precios_mayoreo:
+
+Obtiene los precios de mayoreo según la columna especificada.
+
+Funciona correctamente.
+
+get_precios_mayoreo_3kg, get_precios_mayoreo_10kg, get_precios_mayoreo_50kg:
+
+Métodos específicos para obtener precios de mayoreo.
+
+Funcionan correctamente.
+
+actualizar_precio:
+
+Actualiza los precios de un producto en la base de datos.
+
+Valida que los precios sean números positivos.
+
+Maneja errores básicos.
+
+Funciona correctamente.
+
+close:
+
+Cierra la conexión a la base de datos.
+
+Funciona correctamente.

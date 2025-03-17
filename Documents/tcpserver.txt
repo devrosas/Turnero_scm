@@ -1,0 +1,39 @@
+Análisis de TCPManager.py
+1. Estructura general:
+La clase está bien organizada y cumple con su propósito principal: gestionar la comunicación TCP con la báscula y procesar los comandos recibidos.
+
+Los métodos son claros y tienen nombres descriptivos.
+
+2. Métodos:
+__init__:
+
+Inicializa la clase con una instancia de TurnoManager.
+
+Configura el logger para registrar eventos.
+
+Funciona correctamente.
+
+iniciar_servidor:
+
+Inicia el servidor TCP en un hilo separado.
+
+Maneja conexiones de clientes en hilos independientes.
+
+Funciona correctamente.
+
+procesar_comando:
+
+Procesa los datos recibidos y extrae el tipo de comando, el valor del turno y el ID de la báscula.
+
+Maneja errores básicos.
+
+Funciona correctamente.
+
+procesar_datos:
+
+Procesa los datos recibidos y ejecuta las acciones correspondientes (avanzar, retroceder o actualizar el turno).
+
+Maneja errores básicos.
+
+Funciona correctamente.
+

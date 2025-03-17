@@ -1,0 +1,195 @@
+/* Estilos generales */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "acumin-pro", sans-serif;
+    font-weight: bold; /* Acumin Pro Bold */
+    background-image: url(img/FONDO_TURNERO__Mesa\ de\ trabajo\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Contenedor principal */
+.contenedor {
+    position: relative;
+    display: inline-block;
+}
+
+/* Imagen del producto */
+.imagen {
+    width: 600px; /* Ajusta el tamaño si es necesario */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Cápsula del precio con forma de romboide */
+.precio {
+    position: absolute;
+    bottom: 10px; /* Posición desde abajo */
+    right: 10px; /* Posición desde la derecha */
+    background-color: #FF5A1F; /* Color del fondo */
+    color: white; /* Color del texto */
+    padding: 8px 32px; /* Ajustar el tamaño interno */
+    border-radius: 50px; /* Bordes curvados */
+    font-size: 35px; /* Tamaño del número principal */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    border: 10px solid white; /* Borde blanco */
+    display: flex;
+    align-items: flex-end; /* Alinear los decimales hacia abajo */
+    gap: 8px; /* Espaciado entre los elementos */
+
+    /* Rotación e inclinación para el efecto romboide */
+    transform: skewX(-15deg) rotate(-5deg);
+
+    /* Efecto de brillo ligero en el borde */
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Desinclinar el contenido para que no se deforme */
+.simbolo, .entero, .decimales {
+    transform: skewX(15deg); /* Corrige la inclinación interna */
+}
+
+/* Símbolo de $ con brillo */
+.simbolo {
+    font-size: 50px; /* Tamaño del símbolo */
+    align-self: center; /* Centrar verticalmente */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5); /* Brillo ligero */
+}
+
+/* Número principal con brillo */
+.entero {
+    font-size: 50px; /* Tamaño principal */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5); /* Brillo ligero */
+}
+
+/* Decimales más pequeños y apilados */
+.decimales {
+    display: flex;
+    flex-direction: column; /* Apilar .00 y KG */
+    align-items: center; /* Centrar */
+    font-size: 20px; /* Tamaño más pequeño */
+    position: relative;
+    bottom: 12px;
+}
+
+/* Unidad "KG" con brillo */
+.unidad {
+    font-size: 20px; /* Más pequeño */
+    margin-top: -4px; /* Ajustar posición */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5); /* Brillo ligero */
+}
+
+
+/*Seccion Mayorista************************************************************************************************************************/
+/* Contenedor principal */
+.container_promocion {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Asegura que el contenido ocupe el ancho completo */
+}
+
+/* Título principal */
+.titulo {
+    font-size: 82px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el texto */
+    word-break: break-word; /* Permitir saltos de línea */
+    line-height: 1.2; /* Ajusta el espacio entre líneas */
+    max-width: 55%; /* Limita el ancho para forzar el salto */
+    margin: 0 auto 20px; /* Centra el bloque y mantiene el espacio inferior */
+}
+
+/* Imagen "M de Mayoreo" */
+.mayoreo {
+    display: flex;
+    justify-content: center; /* Centra la imagen */
+    margin-bottom: 30px; /* Espacio entre la imagen y las cápsulas */
+}
+
+.mayoreo img {
+    width: 500px; /* Ajusta el tamaño según necesites */
+}
+
+/* Sección de precios */
+.precios_mayoreo {
+    display: flex;               /* Alinea horizontalmente */
+    justify-content: center;     /* Centra las cápsulas */
+    gap: 20px;                   /* Espacio entre las cápsulas */
+    margin-bottom: 20px;         /* Separación con la leyenda */
+    flex-wrap: wrap;             /* Permite que se ajusten en pantallas pequeñas */
+}
+
+/* Cápsula del precio */
+.precio_mayorista {
+    background-color: #FF5A1F; /* Color de fondo */
+    color: white; /* Texto blanco */
+    border-radius: 50px; /* Bordes curvados */
+    border: 10px solid white; /* Borde blanco */
+    padding: 8px 32px; /* Ajustar el tamaño interno */
+    font-size: 35px; /* Tamaño del número principal */
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    gap: 8px; /* Espaciado entre los elementos */
+
+    /* Rotación e inclinación para el efecto romboide */
+    transform: skewX(-15deg) rotate(-5deg);
+
+    /* Efecto de brillo ligero en el borde */
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Desinclinación del contenido interno */
+.precio_mayorista > span {
+    display: inline-block;
+    transform: skewX(15deg);
+}
+
+/* Símbolo de $ con brillo */
+.simbolo_mayorista {
+    font-size: 60px; /* Tamaño más grande */
+    align-self: flex-start; /* Alinea el símbolo arriba */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Número principal */
+.entero_mayorista {
+    font-size: 60px; /* Tamaño principal */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Decimales + KG apilados */
+.decimales_mayorista {
+    display: flex;
+    flex-direction: column; /* Apila los decimales y KG */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: flex-start; /* Empieza desde arriba */
+    font-size: 18px; /* Tamaño reducido para los decimales */
+    line-height: 1; /* Reducir espacio entre .00 y KG */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+/* KG ajustado */
+.unidad_mayorista {
+    font-size: 18px; /* Más pequeño */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Leyenda centrada debajo */
+.leyenda_mayoreo {
+    text-align: center; /* Centrar el texto */
+    margin-top: 30px; /* Espacio con los precios */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.leyenda_mayoreo p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000; /* Rojo oscuro */
+}

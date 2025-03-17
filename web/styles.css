@@ -1,0 +1,550 @@
+@font-face{
+    font-family: 'Acumin Bold Italic Pro';
+    src: url(fonts/Acumin-Bold\ Italic\ Pro.ttf);
+}
+@font-face{
+    font-family: 'Acumin Bold Pro';
+    src: url(fonts/Acumin-Bold\ Pro.ttf);
+}
+@font-face{
+    font-family: 'Acumin Italica Pro';
+    src: url(fonts/Acumin-Italic\ Pro.ttf);
+}
+@font-face{
+    font-family: 'Acumin Regular Pro';
+    src: url(fonts/Acumin-Regular\ Pro.ttf);
+}
+
+@font-face{
+    font-family: 'Golden pepperdemo';
+    src: url(fonts/Goldenpepperdemo-vmPRZ.ttf);
+}
+
+
+
+
+/* Estilos generales */
+body {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("images/FONDO_TURNERO__Mesa\ de\ trabajo\ 1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Contenedor principal (flex vertical) */
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh; /* Espacio entre filas en unidades relativas */
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Filas (usan grid para dividir secciones) */
+.fila-arriba, .fila-abajo {
+    display: grid;
+    height: 50vh; /* Cada fila ocupa la mitad de la pantalla */
+    gap: 1vh; /* Espacio entre secciones en unidades relativas */
+}
+
+.fila-arriba {
+    grid-template-columns: 25% 75%; /* 30% | 70% */
+}
+
+.fila-abajo {
+    grid-template-columns: 85% 15%; /* 70% | 30% */
+}
+
+/* Estilos comunes para todas las secciones */
+.galeria, .promocion, .tabla-productos, .turnos {
+    background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
+    border-radius: 1.5vh; /* Bordes redondeados en unidades relativas */
+    padding: 1vh;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0); /* Sombras en unidades relativas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Galería (30%) */
+.galeria .contenedor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Acumin Bold Pro;
+}
+
+.galeria .logo {
+    position: absolute;
+    top: 1vh; /* Posición relativa */
+    transform: translateX(10%);
+    z-index: 2;
+}
+
+.galeria .logo img {
+    width: 100%; /* Imagen flexible */
+    height: 100%;
+}
+
+.galeria .contenedor-imagen {
+    height: 55%;
+    position: relative;
+}
+
+.galeria .imagen {
+    width: 120%;
+    height: auto; /* Imagen flexible */
+    object-fit: contain;
+    border-radius: 1.5vh;
+    margin-top: 3vh;
+}
+
+/* Píldora de precio */
+.galeria .precio {
+    position: absolute;
+    bottom: 3vh;
+    right: -13vh;
+    background-color: #FF5A1F;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.3); /* Sombra suave */
+    color: white;
+    padding: 1vh 3vh;
+    border-radius: 5vh;
+    font-size: 4vh;
+    font-weight: bold;
+    border: 0.6vh solid white;
+    transform: skewX(-15deg) rotate(-5deg);
+    display: flex;
+    align-items: center;
+    gap: 0.6vh;
+}
+
+.galeria .simbolo {
+    font-size: 4vh;
+    text-shadow: 0 0.1vh 0.3vh rgba(255, 255, 255, 0.5);
+}
+
+.galeria .unidad {
+    font-size: 1vh;
+    text-shadow: 0 0.1vh 0.3vh rgba(255, 255, 255, 0.5);
+}
+
+.galeria .decimales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vh;
+    text-shadow: 0 0.1vh 0.3vh rgba(255, 255, 255, 0.5);
+}
+
+/* Promoción (70%) */
+.promocion .container_promocion {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 7vh;
+    align-items: center;
+    font-family: Acumin Bold Pro;
+}
+
+.promocion .titulo {
+    font-size: 5vh;
+    text-align: center;
+    margin: 1vh 0;
+    color: #000000;
+}
+
+.promocion .mayoreo img {
+    width: 100%;
+    max-width: 50vh;
+    height: auto;
+    display: block;
+    margin: 4vh auto;
+}
+
+/* Contenedor de precios de mayoreo */
+.promocion .precios_mayoreo {
+    display: flex;
+    justify-content: space-between;
+    gap: 3vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+/* Estilos para las píldoras de mayoreo */
+.promocion .precio_mayorista {
+    background-color: #FF5A1F;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.3); /* Sombra suave */
+    color: white;
+    border-radius: 5vh;
+    border: 0.6vh solid white;
+    padding: 1vh 3vh;
+    font-size: 4vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.6vh;
+    transform: skewX(-15deg) rotate(-5deg);
+}
+
+.promocion .simbolo_mayorista {
+    font-size: 4vh;
+    text-shadow: 0 0.1vh 0.3vh rgba(255, 255, 255, 0.5);
+}
+
+.promocion .entero_mayorista {
+    font-size: 4vh;
+    text-shadow: 0 0.1vh 0.3vh rgba(255, 255, 255, 0.5);
+}
+
+.promocion .decimales_mayorista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vh;
+    text-shadow: 0 0.1vh 0.3vh rgba(255, 255, 255, 0.5);
+}
+
+.promocion .unidad_mayorista {
+    font-size: 1vh;
+    text-shadow: 0 0.1vh 0.3vh rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos para la sección "Llevando" */
+.seccion_llevando {
+    display: flex;
+    justify-content: center;
+    gap: 3vh;
+    margin-top: 1vh;
+}
+
+.llevando_mas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4vh;
+    font-weight: bold;
+    color: #000;
+    padding: 1vh 2vh;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 1.5vh;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0);
+}
+
+.llevando_mas .primera_oracion {
+    font-size: 1.5vh;
+    color: #000000;
+    font-weight: bold;
+}
+
+.llevando_mas .segunda_oracion {
+    font-size: 4vh;
+    color: #000000;
+    margin-top: 0.5vh;
+    font-weight: bold;
+}
+
+/* Leyenda de mayoreo */
+.promocion .leyenda_mayoreo {
+    text-align: center;
+    font-size: 2vh;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Contenedor de la tabla de productos */
+/* Contenedor de la tabla de productos */
+.contenedor-tabla {
+    width: 100%; /* Ancho más grande para aprovechar el espacio */
+    max-width: 1000VH; /* Limitar el ancho máximo */
+    height: auto; /* Altura automática según el contenido */
+    display: grid;
+    border-radius: 1.5vh;
+    padding: 2vh;
+    position: relative; /* Posicionamiento absoluto */
+    left: 51%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Centrado horizontalmente */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    bottom: -14%;
+}
+
+/* Tabla de productos */
+.tabla {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 2vh; /* Espacio entre celdas */
+    width: 100%;
+    height: 85%; /* Ocupa todo el espacio disponible */
+}
+
+/* Celdas de la tabla */
+.celda {
+    padding: 1.5vh; /* Padding más generoso */
+    text-align: center;
+    border-radius: 1vh;
+    background-color: #d35a29; /* Cambia el color al pasar el mouse */
+    box-shadow: 0 0.6vh 1.2vh rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    color: white;
+    font-size: 2.5vh; /* Tamaño de fuente más pequeño */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Evita que el contenido se desborde */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+/* Efecto hover en las celdas */
+.celda:hover {
+    background-color: #d35a29; /* Cambia el color al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 0 0.6vh 1.2vh rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+/* Estilo para el nombre del producto */
+.nombre-producto {
+    flex: 1; /* Ocupa el espacio disponible */
+    text-align: left; /* Alinea el nombre a la izquierda */
+    padding-right: 1vh; /* Espacio entre el nombre y el precio */
+}
+
+/* Estilo para el precio del producto */
+.precio-producto {
+    flex: 1; /* Ocupa el espacio disponible */
+    text-align: right; /* Alinea el precio a la derecha */
+    padding-left: 1vh; /* Espacio entre el nombre y el precio */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor-tabla {
+        width: 95%; /* Ocupa más espacio en pantallas pequeñas */
+        padding: 1.5vh; /* Padding reducido */
+    }
+
+    .celda {
+        font-size: 2vh; /* Tamaño de fuente más pequeño en móviles */
+        padding: 1vh; /* Padding reducido */
+    }
+
+    .tabla {
+        gap: 1vh; /* Espacio reducido entre celdas */
+    }
+}
+/* Turnos (30%) */
+.turnos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+/* Estilos para la sección de turnos */
+/* Sección de turnos (posicionamiento absoluto) */
+.seccion_turnos {
+    display: flex;
+    font-family: 'Golden pepperdemo', sans-serif; /* Asegúrate de usar el nombre correcto */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(211, 92, 41);
+    border-radius: 10vh 0 0 10vh; /* Bordes redondeados solo en el lado izquierdo */
+    padding: 2vh;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 25vh; /* Ancho del frame */
+    height: 30%; /* Altura del frame */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: -14.5%; /* Centrado verticalmente */
+    right: 0; /* Al borde derecho */
+    transform: translateY(-50%); /* Ajuste fino para centrar verticalmente */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+.seccion_turnos .titulo_turno h2 {
+    font-size: 3.6vh;
+    color: #ffffff;
+    margin-bottom: 1vh;
+    font-family: 'Golden pepperdemo', sans-serif;
+}
+
+.seccion_turnos .numero_turno p {
+    font-size: 4.8vh;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 1vh 0;
+    font-family: 'Golden pepperdemo', sans-serif;
+}
+
+.seccion_turnos .bascula_turno p {
+    font-size: 2.4vh;
+    color: #ffffff;
+    margin-top: 1vh;
+    font-family: 'Golden pepperdemo', sans-serif;
+}
+
+@keyframes scale-reveal {
+    from {
+        transform: scaleX(0) scaleY(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scaleX(1.1) scaleY(1);
+        opacity: 1;
+    }
+    to {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Overlay Turno */
+.overlay-turno {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/FONDO_TURNERO__Mesa\ de\ trabajo\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Cuando se activa, se muestra con animación */
+.overlay-turno.activo {
+    display: flex;
+    animation: scale-reveal 0.8s ease-in-out forwards;
+}
+
+/* Contenedor del turno */
+.contenido-turno-maximizado {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Distribuye los elementos de forma uniforme */
+    align-items: center;
+    
+    width: 80%;  /* Ajusta el ancho según necesites */
+    max-width: 600px; /* Evita que se haga demasiado grande */
+    min-height: 40vh; /* Que al menos ocupe el 60% de la altura */
+    
+    font-family: 'Golden pepperdemo', sans-serif;
+    background-color: rgb(211, 92, 41);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+/* Estilos para el título y turno */
+#titulo-turno-maximizado,
+#bascula-turno-maximizado {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 10px rgba(243, 130, 0, 0.8);
+    animation: bounce 1.5s infinite;
+}
+
+#numero-turno-maximizado {
+    font-size: 15rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 15px rgba(243, 130, 0, 1);
+    animation: bounce 1.2s infinite alternate;
+}
+
+
+/* ========== Navegación Discreta Mejorada ========== */
+/* ========== Navegación Discreta Mejorada y Más Grande ========== */
+.nav_oculta {
+    position: fixed;
+    bottom: 2vh;
+    left: 2vh;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4vh 2vh; /* Aumento padding para que sea más alta */
+    border-radius: 1.5vh;
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
+    min-height: 30vh; /* Asegura que siempre sea lo suficientemente alta */
+}
+
+/* Área activadora aún más grande */
+.area-activadora {
+    position: fixed;
+    bottom: 2vh;
+    left: 2vh;
+    width: 10vh; /* Más ancha */
+    height: 10vh; /* Mucho más alta */
+    background: transparent;
+    z-index: 1001;
+}
+
+/* Mostrar la navegación cuando el mouse está sobre el área activadora o la navegación */
+.area-activadora:hover + .nav_oculta,
+.nav_oculta:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== Estilos de los enlaces ===== */
+.nav_oculta a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.8vh; /* Un poco más grande */
+    font-weight: bold;
+    padding: 1.5vh 2vh; /* Más espacio para hacer clic */
+    border-radius: 1vh;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav_oculta a:hover {
+    background-color: rgba(255, 90, 31, 0.3);
+}
+
+
+/* Estilos para el footer */
+footer {
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: -1%; /* Lo coloca en el borde inferior */
+    left: -4%; /* Lo coloca en el borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto en color blanco */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 1vh 0; /* Espaciado interno (arriba y abajo) */
+    font-size: 1.5vh; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}

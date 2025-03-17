@@ -1,0 +1,4 @@
+
+--Funcion actualizar precios desde excel 
+Verificar que el archivo Excel tenga las columnas necesarias:
+Además de PLU y PRECIO, ahora también necesitamos las columnas MAYOREO_3KG, MAYOREO_10KG, y MAYOREO_50KG.

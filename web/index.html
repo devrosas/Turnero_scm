@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto y Promoción</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pcm6tmh.css">
+</head>
+
+<body>
+    <main class="contenedor-principal">
+        <!-- Fila superior: 30% - 70% -->
+        <div class="fila-arriba">
+            <section class="galeria">
+                <div class="contenedor">
+                    <div class="logo">
+                        <img id="logo" src="images/logo.png" alt="logo">
+                    </div>
+                    <div class="contenedor-imagen">
+                        <img id="imagen-producto" src="images/000011.png" alt="Producto" class="imagen">
+                    </div>
+                    <div class="precio">
+                        <span class="simbolo">$</span>
+                        <span id="precio-entero" class="entero">146</span>
+                        <span class="decimales">
+                            <span id="precio-decimal">.00</span>
+                            <span class="unidad">KG</span>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="promocion">
+                <div class="container_promocion">
+                    <h1 id="titulo-promocion" class="titulo">PIERNA DE CDO S/HUESO EN BISTEC</h1>
+                    <div class="mayoreo">
+                        <img id="banner-mayoreo" src="images/M DE MAYOREO.png" alt="M de Mayoreo">
+                    </div>
+                    <div class="precios_mayoreo">
+                        <!-- Píldora de precio 1 -->
+                        <div class="precio_mayorista">
+                            <span class="simbolo_mayorista">$</span>
+                            <span id="precio-mayoreo-1" class="entero_mayorista">146</span>
+                            <span class="decimales_mayorista">
+                                <span id="decimal-mayoreo-1">.00</span>
+                                <span class="unidad_mayorista">KG</span>
+                            </span>
+                        </div>
+                        <!-- Píldora de precio 2 -->
+                        <div class="precio_mayorista">
+                            <span class="simbolo_mayorista">$</span>
+                            <span id="precio-mayoreo-2" class="entero_mayorista">146</span>
+                            <span class="decimales_mayorista">
+                                <span id="decimal-mayoreo-2">.00</span>
+                                <span class="unidad_mayorista">KG</span>
+                            </span>
+                        </div>
+                        <!-- Píldora de precio 3 -->
+                        <div class="precio_mayorista">
+                            <span class="simbolo_mayorista">$</span>
+                            <span id="precio-mayoreo-3" class="entero_mayorista">146</span>
+                            <span class="decimales_mayorista">
+                                <span id="decimal-mayoreo-3">.00</span>
+                                <span class="unidad_mayorista">KG</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Sección Llevando -->
+                    <div class="seccion_llevando">
+                        <!-- Cápsula de llevando +3kg -->
+                        <div class="llevando_mas">
+                            <span class="primera_oracion">Llevando</span>
+                            <span class="segunda_oracion">+3KG</span>
+                        </div>
+                        <!-- Cápsula de llevando +10kg -->
+                        <div class="llevando_mas">
+                            <span class="primera_oracion">Llevando</span>
+                            <span class="segunda_oracion">+10KG</span>
+                        </div>
+                        <!-- Cápsula de llevando +50kg -->
+                        <div class="llevando_mas">
+                            <span class="primera_oracion">Llevando</span>
+                            <span class="segunda_oracion">+50KG</span>
+                        </div>
+                    </div>
+                    <div class="leyenda_mayoreo">
+                        <p>PRECIO VÁLIDO LLEVANDO EL MISMO PRODUCTO</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Fila inferior: 70% - 30% -->
+        <div class="fila-abajo">
+            <section class="tabla-productos">
+                <div class="contenedor-tabla">
+                    <!-- Tabla de productos -->
+                    <div id="tabla-productos" class="tabla"></div>
+                </div>
+            </section>
+
+            <section class="seccion_turnos">
+                <div class="titulo_turno">
+                    <h2>TURNO</h2>
+                </div>
+                <div class="numero_turno">
+                    <p id="numero-turno">15</p>
+                </div>
+                <div class="bascula_turno">
+                    <p id="bascula-turno">Bascula: 1</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Overlay para el turno maximizado -->
+    <div class="overlay-turno">
+        <div class="contenido-turno-maximizado">
+            <div class="titulo-turno" id="titulo-turno-maximizado">TURNO</div>
+            <div id="numero-turno-maximizado" class="numero-turno">24</div>
+            <div id="bascula-turno-maximizado" class="bascula-turno">Báscula: 01</div>
+        </div>
+    </div>
+
+    <!-- Área activadora en la esquina inferior izquierda -->
+    <div class="area-activadora"></div>
+
+    <!-- Navegación discreta -->
+    <nav class="nav_oculta">
+        <a id="actualizar-precios" href="#">Actualizar Precios</a>
+        <a id="cambiar-fondo" href="#">Cambiar Fondo</a>
+        <a id="cambiar-logo" href="#">Cambiar Logo</a>
+        <a id="cambiar-sonido" href="#">Cambiar sonido</a>
+        <a id="seleccionar-galeria" href="#">Seleccionar Galeria</a>
+    </nav>
+    
+<!-- Inputs ocultos para seleccionar archivos -->
+<input type="file" id="input-fondo" accept="image/*" style="display: none;">
+<input type="file" id="input-logo" accept="image/*" style="display: none;">
+<input type="file" id="input-sonido" accept="audio/*" style="display: none;">
+<input type="file" id="input-galeria" accept="image/*" webkitdirectory directory multiple style="display: none;">
+<input type="file" id="input-excel" accept=".xlsx, .xls" style="display: none;">
+
+    <audio id="sonido-turno" src=""></audio>
+    <footer>
+        <h3>PRECIO SUJETO A CAMBIOS SIN PREVIO AVISO</h3>
+    </footer>
+
+    <!-- Incluir el archivo JavaScript -->
+    <script type="module" src="Js/script.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+</body>
+
+</html>

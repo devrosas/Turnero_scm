@@ -1,0 +1,44 @@
+Análisis de Personalizacion.py
+1. Estructura general:
+La clase está bien organizada y cumple con su propósito principal: gestionar la personalización de la aplicación (logo, fondo, sonido, etc.).
+
+Los métodos son claros y tienen nombres descriptivos.
+
+2. Métodos:
+__init__:
+
+Inicializa la clase con una instancia de ConfigManager.
+
+Obtiene la ruta del sonido desde la configuración.
+
+Funciona correctamente.
+
+cambiar_logo:
+
+Cambia el logo de la aplicación y guarda la nueva ruta en la configuración.
+
+Maneja la decodificación de datos en base64 y la creación de la carpeta web/images.
+
+Funciona correctamente.
+
+seleccionar_sonido:
+
+Cambia el sonido de la aplicación y guarda la nueva ruta en la configuración.
+
+Maneja la decodificación de datos en base64 y la creación de la carpeta web/sounds.
+
+Funciona correctamente.
+
+seleccionar_carpeta_galeria:
+
+Actualiza la ruta de la galería en la configuración.
+
+Funciona correctamente.
+
+cambiar_fondo:
+
+Cambia el fondo de la aplicación y guarda la nueva ruta en la configuración.
+
+Maneja la creación de la carpeta web/images y la escritura de la imagen.
+
+Funciona correctamente.

@@ -1,0 +1,48 @@
+Análisis de TurnoManager.py
+1. Estructura general:
+La clase está bien organizada y cumple con su propósito principal: gestionar los turnos y reproducir un sonido cuando se actualiza el turno.
+
+Los métodos son claros y tienen nombres descriptivos.
+
+2. Métodos:
+__init__:
+
+Inicializa la clase con un callback para actualizar la interfaz y una ruta de sonido.
+
+Inicializa Pygame para reproducir sonidos.
+
+Funciona correctamente.
+
+actualizar_turno:
+
+Actualiza el turno actual y llama al callback para actualizar la interfaz.
+
+Reproduce un sonido si está configurado.
+
+Funciona correctamente.
+
+actualizar_turno_a_numero:
+
+Actualiza el turno a un número específico y llama al callback para actualizar la interfaz.
+
+Reproduce un sonido si está configurado.
+
+Funciona correctamente.
+
+mostrar_turno:
+
+Muestra el turno actual utilizando el callback o imprime el valor en la consola.
+
+Funciona correctamente.
+
+obtener_turno_actual:
+
+Devuelve el valor actual del turno.
+
+Funciona correctamente.
+
+reproducir_sonido:
+
+Reproduce un sonido si la ruta al archivo de sonido es válida.
+
+Funciona correctamente.
