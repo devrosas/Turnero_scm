@@ -115,7 +115,12 @@ body {
     position: absolute;
     bottom: -8vh;
     right: -22vh;
-    background-color: #FF5A1F;
+     background: linear-gradient(to right, 
+        #E84F1E 0%, 
+        #EA6022 25%, 
+        #ED752C 50%, 
+        #E9571D 75%, 
+        #E84F1E 100%);
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.0); /* Sombra suave */
     color: white;
     padding: .5vh 4.5vh;
@@ -187,7 +192,12 @@ body {
 
 /* Estilos para las píldoras de mayoreo */
 .promocion .precio_mayorista {
-    background-color: #FF5A1F;
+    background: linear-gradient(to right, 
+    #E84F1E 0%, 
+    #EA6022 25%, 
+    #ED752C 50%, 
+    #E9571D 75%, 
+    #E84F1E 100%);
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.3); /* Sombra suave */
     color: white;
     border-radius: 5vh;
@@ -303,7 +313,6 @@ body {
     padding: 1.5vh; /* Padding más generoso */
     text-align: center;
     border-radius: 1vh;
-    background-color: #d3592900; /* Cambia el color al pasar el mouse */
     box-shadow: 0 0.6vh 1.2vh rgba(0, 0, 0, 0); /* Sombra más pronunciada */
     color: white;
     font-size: 2.5vh; /* Tamaño de fuente más pequeño */
@@ -382,14 +391,14 @@ body {
     z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
 .seccion_turnos .titulo_turno h2 {
-    font-size: 4vh;
+    font-size: 5vh;
     color: #ffffff;
     margin-bottom: 1vh;
     font-family: 'Golden pepperdemo', sans-serif;
 }
 
 .seccion_turnos .numero_turno p {
-    font-size: 4.8vh;
+    font-size: 8vh;
     color: #ffffff;
     font-weight: bold;
     margin: 1vh 0;
@@ -397,7 +406,7 @@ body {
 }
 
 .seccion_turnos .bascula_turno p {
-    font-size: 2.4vh;
+    font-size: 3vh;
     color: #ffffff;
     margin-top: 1vh;
     font-family: 'Acumin Italica Pro', sans-serif;
@@ -456,16 +465,14 @@ body {
     flex-direction: column;
     justify-content: space-around; /* Distribuye los elementos de forma uniforme */
     align-items: center;
-    
     width: 80%;  /* Ajusta el ancho según necesites */
     max-width: 600px; /* Evita que se haga demasiado grande */
     min-height: 40vh; /* Que al menos ocupe el 60% de la altura */
-    
     font-family: 'Golden pepperdemo', sans-serif;
-    background-color: rgb(211, 92, 41);
+    background-color: rgba(211, 92, 41, 0);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.0);
     text-align: center;
 }
 /* Estilos para el título y turno */
@@ -474,16 +481,18 @@ body {
     font-size: 6rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: rgb(255, 255, 255);
-    text-shadow: 3px 3px 10px rgba(243, 130, 0, 0.8);
+    color:  #EA6022 ;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
     animation: bounce 1.5s infinite;
 }
-
+#bascula-turno-maximizado{
+    font-family: 'Acumin Italica Pro', sans-serif;
+}
 #numero-turno-maximizado {
     font-size: 15rem;
     font-weight: bold;
-    color: rgb(255, 255, 255);
-    text-shadow: 3px 3px 15px rgba(243, 130, 0, 1);
+    color:  #EA6022;
+    text-shadow: 3px 3px 15px rgb(0, 0, 0.4);
     animation: bounce 1.2s infinite alternate;
 }
 
