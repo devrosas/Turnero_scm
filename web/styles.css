@@ -106,23 +106,24 @@ body {
     height: auto; /* Imagen flexible */
     object-fit: contain;
     border-radius: 1.5vh;
-    margin-top: 3vh;
+    margin-top: 7vh;
+    margin-left: 7vh;
 }
 
 /* Píldora de precio */
 .galeria .precio {
     position: absolute;
-    bottom: 3vh;
-    right: -13vh;
+    bottom: -8vh;
+    right: -22vh;
     background-color: #FF5A1F;
-    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.3); /* Sombra suave */
+    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.0); /* Sombra suave */
     color: white;
-    padding: 1vh 3vh;
-    border-radius: 5vh;
-    font-size: 4vh;
+    padding: .5vh 4.5vh;
+    border-radius: 6vh;
+    font-size: 7.5vh;
     font-weight: bold;
-    border: 0.6vh solid white;
-    transform: skewX(-15deg) rotate(-5deg);
+    border: 0.8vh solid white;
+    transform: skewX(351deg) rotate(354deg);
     display: flex;
     align-items: center;
     gap: 0.6vh;
@@ -163,6 +164,8 @@ body {
     text-align: center;
     margin: 1vh 0;
     color: #000000;
+    height: 20vh;
+    margin-left: 15vh;
 }
 
 .promocion .mayoreo img {
@@ -177,7 +180,7 @@ body {
 .promocion .precios_mayoreo {
     display: flex;
     justify-content: space-between;
-    gap: 3vh;
+    gap: 1vh;
     margin-bottom: 1vh;
     margin-top: 1vh;
 }
@@ -188,23 +191,24 @@ body {
     box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.3); /* Sombra suave */
     color: white;
     border-radius: 5vh;
-    border: 0.6vh solid white;
-    padding: 1vh 3vh;
-    font-size: 4vh;
+    border: 0.8vh solid white;
+    padding: .5vh 4.5vh;
+    font-size: 7vh;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 0.6vh;
-    transform: skewX(-15deg) rotate(-5deg);
+    transform: skewX(351deg) rotate(354deg);
+    position: relative;
+    bottom: 3.8vh;
+    left: 8vh;
 }
 
 .promocion .simbolo_mayorista {
-    font-size: 4vh;
     text-shadow: 0 0.1vh 0.3vh rgba(255, 255, 255, 0.5);
 }
 
 .promocion .entero_mayorista {
-    font-size: 4vh;
     text-shadow: 0 0.1vh 0.3vh rgba(255, 255, 255, 0.5);
 }
 
@@ -287,6 +291,11 @@ body {
     gap: 2vh; /* Espacio entre celdas */
     width: 100%;
     height: 85%; /* Ocupa todo el espacio disponible */
+    position: relative;
+    left: -1vh;
+    margin-left: 1vh;
+    margin-top: .5vh;
+
 }
 
 /* Celdas de la tabla */
@@ -294,8 +303,8 @@ body {
     padding: 1.5vh; /* Padding más generoso */
     text-align: center;
     border-radius: 1vh;
-    background-color: #d35a29; /* Cambia el color al pasar el mouse */
-    box-shadow: 0 0.6vh 1.2vh rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    background-color: #d3592900; /* Cambia el color al pasar el mouse */
+    box-shadow: 0 0.6vh 1.2vh rgba(0, 0, 0, 0); /* Sombra más pronunciada */
     color: white;
     font-size: 2.5vh; /* Tamaño de fuente más pequeño */
     font-weight: bold;
@@ -362,15 +371,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(211, 92, 41);
-    border-radius: 10vh 0 0 10vh; /* Bordes redondeados solo en el lado izquierdo */
     padding: 2vh;
-    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 25vh; /* Ancho del frame */
     height: 30%; /* Altura del frame */
     position: absolute; /* Posicionamiento absoluto */
-    bottom: -14.5%; /* Centrado verticalmente */
+    bottom: -11.5%; /* Centrado verticalmente */
     right: 0; /* Al borde derecho */
     transform: translateY(-50%); /* Ajuste fino para centrar verticalmente */
     z-index: 10; /* Asegura que esté por encima de otros elementos */
