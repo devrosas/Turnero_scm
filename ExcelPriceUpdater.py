@@ -7,6 +7,21 @@ class ExcelPriceUpdater:
     def __init__(self, db_manager):
         self.db_manager = db_manager
 
+    def _validar_precio(self, precio):
+        """
+        Valida que el precio sea un número positivo.
+        :param precio: Valor a validar.
+        :return: Precio validado (float).
+        :raises ValueError: Si el precio no es válido.
+        """
+        try:
+            precio = float(precio)  # Convertir a float
+            if precio < 0:
+                raise ValueError("El precio no puede ser negativo.")
+            return precio
+        except (ValueError, TypeError):
+            raise ValueError("El precio debe ser un número válido.")
+
     def actualizar_precios_desde_excel(self, base64_data):
         try:
             # Decodificar el archivo Base64

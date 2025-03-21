@@ -107,7 +107,6 @@ class CarniceriaApp:
     def validar_archivo_excel(self, base64_data):
         """Valida que el archivo Excel tenga las columnas requeridas."""
         return self.excel_price_updater.validar_archivo_excel(base64_data)
-
     # Funciones de TurnoManager
     def actualizar_turno(self, incremento, bascula_id):
         self.turno_manager.actualizar_turno(incremento, bascula_id)
