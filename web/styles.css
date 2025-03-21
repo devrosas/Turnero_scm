@@ -3,7 +3,7 @@
     src: url(fonts/Acumin-Bold\ Italic\ Pro.ttf);
 }
 @font-face{
-    font-family: 'Acumin Bold Pro';
+    font-family: 'c';
     src: url(fonts/Acumin-Bold\ Pro.ttf);
 }
 @font-face{
@@ -382,7 +382,7 @@ body {
     z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
 .seccion_turnos .titulo_turno h2 {
-    font-size: 3.6vh;
+    font-size: 4vh;
     color: #ffffff;
     margin-bottom: 1vh;
     font-family: 'Golden pepperdemo', sans-serif;
@@ -400,7 +400,7 @@ body {
     font-size: 2.4vh;
     color: #ffffff;
     margin-top: 1vh;
-    font-family: 'Golden pepperdemo', sans-serif;
+    font-family: 'Acumin Italica Pro', sans-serif;
 }
 
 @keyframes scale-reveal {
