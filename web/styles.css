@@ -3,7 +3,7 @@
     src: url(fonts/Acumin-Bold\ Italic\ Pro.ttf);
 }
 @font-face{
-    font-family: 'c';
+    font-family: 'Acumin Bold';
     src: url(fonts/Acumin-Bold\ Pro.ttf);
 }
 @font-face{
@@ -298,12 +298,11 @@ body {
 .tabla {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
-    gap: 2vh; /* Espacio entre celdas */
-    width: 100%;
+    gap: 1.5vh; /* Espacio entre celdas */
+    width: 95.6%;
     height: 85%; /* Ocupa todo el espacio disponible */
     position: relative;
-    left: -1vh;
-    margin-left: 1vh;
+    left: 4vh;
     margin-top: .5vh;
 
 }
@@ -311,12 +310,13 @@ body {
 /* Celdas de la tabla */
 .celda {
     padding: 1.5vh; /* Padding más generoso */
+    padding-right: 5vh;
     text-align: center;
     border-radius: 1vh;
     box-shadow: 0 0.6vh 1.2vh rgba(0, 0, 0, 0); /* Sombra más pronunciada */
     color: white;
     font-size: 2.5vh; /* Tamaño de fuente más pequeño */
-    font-weight: bold;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -324,6 +324,7 @@ body {
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
     text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    font-family: 'Acumin Bold', Courier, monospace;
 }
 
 /* Efecto hover en las celdas */
@@ -443,7 +444,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(./images/FONDO_TURNERO__Mesa\ de\ trabajo\ 1.png);
+    background-image: url(./images/fondo_turno.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
