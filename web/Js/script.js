@@ -38,3 +38,21 @@ document.addEventListener("DOMContentLoaded", inicializarAplicacion);
 document.getElementById("actualizar-pagina").addEventListener("click", function () {
     location.reload(); // Recarga la página
 });
+
+function enterFullScreen() {
+    let elem = document.documentElement; // Toda la página
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari y Edge
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
+}
+
+// Ejecutar pantalla completa después de que cargue la página
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(enterFullScreen, 1000); // Esperar 1 seg para evitar bloqueos
+});

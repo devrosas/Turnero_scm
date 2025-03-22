@@ -305,6 +305,6 @@ def obtener_ruta_imagen(plu):
 
 try:
     print("Iniciando interfaz gráfica...")
-    eel.start('index.html', size=(1280, 720))
+    eel.start('index.html', mode='chrome', cmdline_args=['--start-fullscreen'])
 except Exception as e:
     print(f"Error al iniciar la aplicación Eel: {e}")
