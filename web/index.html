@@ -7,6 +7,8 @@
     <title>Producto y Promoción</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/pcm6tmh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -103,17 +105,20 @@
     <div class="area-activadora"></div>
 
     <!-- Navegación discreta -->
+    <!-- Navegación discreta -->
     <nav class="nav_oculta">
-        <a id="actualizar-precios" href="#">Actualizar Precios</a>
-        <a id="cambiar-fondo" href="#">Cambiar Fondo</a>
-        <a id="cambiar-logo" href="#">Cambiar Logo</a>
-        <a id="cambiar-sonido" href="#">Cambiar sonido</a>
-        <a id="seleccionar-galeria" href="#">Seleccionar Galeria</a>
+    <a id="actualizar-precios" href="#"><i class="fa-solid fa-dollar-sign"></i> Actualización de Precios</a>
+    <a id="cambiar-fondo" href="#"><i class="fa-solid fa-paint-roller"></i> Cambiar fondo del turnero</a>
+    <!-- <a id="cambiar-logo" href="#"><i class="fa-solid fa-image"></i> Cambiar Logo</a> -->
+    <a id="cambiar-sonido" href="#"><i class="fa-solid fa-volume-up"></i> Cambiar sonido del turno</a>
+    <a id="seleccionar-galeria" href="#"><i class="fa-solid fa-folder-open"></i> Seleccionar ruta de la galería</a>
+    <a id="actualizar-pagina" href="#"><i class="fa-solid fa-refresh"></i> Actualizar turnero</a>
     </nav>
+
     
 <!-- Inputs ocultos para seleccionar archivos -->
 <input type="file" id="input-fondo" accept="image/*" style="display: none;">
-<input type="file" id="input-logo" accept="image/*" style="display: none;"> 
+<!--<input type="file" id="input-logo" accept="image/*" style="display: none;"> -->
 <input type="file" id="input-sonido" accept="audio/*" style="display: none;">
 <input type="file" id="input-galeria" accept="image/*" webkitdirectory directory multiple style="display: none;">
 <input type="file" id="input-excel" accept=".xlsx, .xls" style="display: none;">

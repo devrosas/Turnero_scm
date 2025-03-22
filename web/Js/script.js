@@ -34,3 +34,7 @@ function actualizarTurnoDesdePython(turnoActual, basculaId) {
 eel.expose(actualizarTurnoDesdePython); // <-- ¡Esta línea es clave!
 // Inicializar la aplicación cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", inicializarAplicacion);
+
+document.getElementById("actualizar-pagina").addEventListener("click", function () {
+    location.reload(); // Recarga la página
+});

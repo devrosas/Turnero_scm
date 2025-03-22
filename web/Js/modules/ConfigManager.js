@@ -13,7 +13,7 @@ export class ConfigManager {
         // Obtener referencias a los elementos del DOM
         const botonCambiarFondo = document.getElementById("cambiar-fondo");
         const inputFondo = document.getElementById("input-fondo");
-        const botonCambiarLogo = document.getElementById("cambiar-logo");
+        //const botonCambiarLogo = document.getElementById("cambiar-logo");//
         const inputLogo = document.getElementById("input-logo");
         const botonCambiarSonido = document.getElementById("cambiar-sonido");
         const inputSonido = document.getElementById("input-sonido");
@@ -25,8 +25,8 @@ export class ConfigManager {
         const nuevosElementos = {
             botonCambiarFondo: botonCambiarFondo.cloneNode(true),
             inputFondo: inputFondo.cloneNode(true),
-            botonCambiarLogo: botonCambiarLogo.cloneNode(true),
-            inputLogo: inputLogo.cloneNode(true),
+           // botonCambiarLogo: botonCambiarLogo.cloneNode(true),//
+            //inputLogo: inputLogo.cloneNode(true),//
             botonCambiarSonido: botonCambiarSonido.cloneNode(true),
             inputSonido: inputSonido.cloneNode(true),
             botonSeleccionarGaleria: botonSeleccionarGaleria.cloneNode(true),
@@ -37,8 +37,8 @@ export class ConfigManager {
         // Reemplazar los elementos antiguos con los nuevos
         botonCambiarFondo.replaceWith(nuevosElementos.botonCambiarFondo);
         inputFondo.replaceWith(nuevosElementos.inputFondo);
-        botonCambiarLogo.replaceWith(nuevosElementos.botonCambiarLogo);
-        inputLogo.replaceWith(nuevosElementos.inputLogo);
+        //botonCambiarLogo.replaceWith(nuevosElementos.botonCambiarLogo);//
+        //inputLogo.replaceWith(nuevosElementos.inputLogo);//
         botonCambiarSonido.replaceWith(nuevosElementos.botonCambiarSonido);
         inputSonido.replaceWith(nuevosElementos.inputSonido);
         botonSeleccionarGaleria.replaceWith(nuevosElementos.botonSeleccionarGaleria);
@@ -55,14 +55,14 @@ export class ConfigManager {
             this.manejarSeleccionArchivo(event, "cambiar_fondo", "Fondo cambiado correctamente");
         });
     
-        nuevosElementos.botonCambiarLogo.addEventListener("click", () => {
+        /*nuevosElementos.botonCambiarLogo.addEventListener("click", () => {
             console.log("Click en Cambiar Logo");
             nuevosElementos.inputLogo.click();
         });
         nuevosElementos.inputLogo.addEventListener("change", (event) => {
             console.log("Archivo de logo seleccionado");
             this.manejarSeleccionArchivo(event, "cambiar_logo", "Logo cambiado correctamente");
-        });
+        });*/
     
         nuevosElementos.botonCambiarSonido.addEventListener("click", () => {
             console.log("Click en Cambiar Sonido");
@@ -108,7 +108,7 @@ export class ConfigManager {
     aplicarConfiguracion() {
         console.log("Aplicando configuración cargada...");
         this.actualizarFondoEnCSS(this.config.ruta_fondo);
-        this.actualizarLogoEnHTML(this.config.ruta_logo);
+        //this.actualizarLogoEnHTML(this.config.ruta_logo);//
         this.actualizarSonidoEnHTML(this.config.sonido_path);
     }
 
@@ -120,13 +120,13 @@ export class ConfigManager {
     }
 
     // Actualizar el logo en el HTML
-    actualizarLogoEnHTML(rutaLogo) {
+    /*actualizarLogoEnHTML(rutaLogo) {
         console.log("Actualizando logo con ruta:", rutaLogo);
         const logoElement = document.getElementById("logo");
         if (logoElement) {
             logoElement.src = rutaLogo;
         }
-    }
+    }*/
 
     // Actualizar el sonido en el HTML
     actualizarSonidoEnHTML(rutaSonido) {

@@ -299,10 +299,10 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
     gap: 1.5vh; /* Espacio entre celdas */
-    width: 95.6%;
+    width: 100%;
     height: 85%; /* Ocupa todo el espacio disponible */
     position: relative;
-    left: 4vh;
+    left: 2vh;
     margin-top: .5vh;
 
 }
